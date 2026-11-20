@@ -110,3 +110,16 @@ footer { margin: 88px 0 56px; padding-top: 24px; border-top: 1px solid var(--lin
   .project.split-media figure { order: 0; max-width: 240px; }
   .project.split-media figure img { aspect-ratio: auto; }
 }
+
+/* autoresearcher diagram (inline SVG, follows light/dark) */
+    .diagram { width: 100%; height: auto; display: block; margin: 8px 0 4px; }
+    .diagram .box { fill: var(--bg); stroke: var(--link-line); stroke-width: 1.2; }
+    .diagram .worker { fill: color-mix(in srgb, var(--text) 4%, var(--bg)); stroke: var(--link-line); stroke-width: 1.2; }
+    .diagram .t { fill: var(--text); font: 500 13px var(--sans); }
+    .diagram .s { fill: var(--soft); font: 400 11.5px var(--sans); }
+    .diagram .m { fill: var(--soft); font: 400 11px var(--mono); }
+    .diagram .a { stroke: var(--soft); stroke-width: 1.2; fill: none; }
+    .diagram .d { stroke: var(--soft); stroke-width: 1.2; fill: none; stroke-dasharray: 3 4; }
+    .diagram .head { fill: var(--soft); }
+.diagram-wrap { overflow-x: auto; }
+@media (max-width: 640px) { .diagram { min-width: 560px; } }

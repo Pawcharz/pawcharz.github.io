@@ -106,11 +106,75 @@
         </figure>
       </article>
 
+      <article class="project">
+        <h3><a href="https://github.com/Pawcharz/autoresearcher">autoresearcher</a></h3>
+        <p>An autonomous researcher for ML codebases. You write down falsifiable questions and a scoring rubric; it starts one agent per question, and each one explores the code, runs experiments and scores its own results until it finds something significant. You wake up to a findings report. It runs on Claude Code, Cursor or Codex, coordinated only through markdown files.</p>
+
+        <div class="diagram-wrap"><svg class="diagram" viewBox="0 0 680 320" role="img" aria-label="Diagram: you give questions and a rubric to program.md, which starts one worker per question; each worker loops explore, experiment, score; results go to findings.md; papers are distilled into notes the workers read.">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path class="head" d="M0,1 L10,5 L0,9 z"/>
+            </marker>
+          </defs>
+
+          <!-- You -->
+          <rect class="box" x="1" y="110" width="112" height="76" rx="8"/>
+          <text class="t" x="16" y="136">You</text>
+          <text class="s" x="16" y="156">questions to test</text>
+          <text class="s" x="16" y="172">+ a scoring rubric</text>
+
+          <path class="a" d="M113 148 H141" marker-end="url(#ah)"/>
+
+          <!-- program.md -->
+          <rect class="box" x="143" y="110" width="120" height="76" rx="8"/>
+          <text class="m" x="158" y="136" style="fill:var(--text)">program.md</text>
+          <text class="s" x="158" y="156">starts one agent</text>
+          <text class="s" x="158" y="172">per question</text>
+
+          <!-- fan out -->
+          <path class="a" d="M263 148 C285 148 285 52 305 52" marker-end="url(#ah)"/>
+          <path class="a" d="M263 148 H305" marker-end="url(#ah)"/>
+          <path class="a" d="M263 148 C285 148 285 244 305 244" marker-end="url(#ah)"/>
+
+          <!-- workers -->
+          <g>
+            <rect class="worker" x="307" y="20" width="206" height="64" rx="8"/>
+            <text class="t" x="322" y="45">Agent 1</text>
+            <text class="s" x="322" y="66">explore → experiment → score ↻</text>
+          </g>
+          <g>
+            <rect class="worker" x="307" y="116" width="206" height="64" rx="8"/>
+            <text class="t" x="322" y="141">Agent 2</text>
+            <text class="s" x="322" y="162">explore → experiment → score ↻</text>
+          </g>
+          <g>
+            <rect class="worker" x="307" y="212" width="206" height="64" rx="8"/>
+            <text class="t" x="322" y="237">Agent 3</text>
+            <text class="s" x="322" y="258">explore → experiment → score ↻</text>
+          </g>
+          <text class="m" x="410" y="300" text-anchor="middle">until score ≥ 7 or out of budget</text>
+
+          <!-- fan in -->
+          <path class="a" d="M513 52 C535 52 535 148 557 148" marker-end="url(#ah)"/>
+          <path class="a" d="M513 148 H557" marker-end="url(#ah)"/>
+          <path class="a" d="M513 244 C535 244 535 148 557 148" marker-end="url(#ah)"/>
+
+          <!-- findings -->
+          <rect class="box" x="559" y="100" width="120" height="96" rx="8"/>
+          <text class="m" x="574" y="126" style="fill:var(--text)">findings.md</text>
+          <text class="s" x="574" y="146">results</text>
+          <text class="s" x="574" y="162">counterarguments</text>
+          <text class="s" x="574" y="178">follow-ups</text>
+
+          <!-- papers -->
+          <rect class="box" x="143" y="232" width="120" height="58" rx="8"/>
+          <text class="m" x="158" y="256" style="fill:var(--text)">papers/</text>
+          <text class="s" x="158" y="276">PDFs → short notes</text>
+          <path class="d" d="M263 261 H305" marker-end="url(#ah)"/>
+        </svg></div>
+      </article>
+
       <ul class="rows projects">
-        <li>
-          <a href="https://github.com/Pawcharz/autoresearcher">autoresearcher</a>
-          <p>Runs ML experiments overnight on your codebase and writes up what it found.</p>
-        </li>
         <li>
           <a href="https://github.com/Pawcharz/graph-touch-pinch">graph-touch-pinch</a>
           <p>An Obsidian plugin that fixes pinch-to-zoom on Windows touchscreens.</p>
