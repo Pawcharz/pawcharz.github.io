@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paweł Blicharz</title>
+  <meta name="description" content="Paweł Blicharz: research engineer in Gdańsk working on mechanistic interpretability, reinforcement learning and generative models for animation.">
+  <meta property="og:title" content="Paweł Blicharz">
+  <meta property="og:description" content="Research engineer working on mechanistic interpretability.">
+  <meta property="og:image" content="assets/portrait.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="col nav-inner">
+      <a href="#top" class="nav-name">Paweł Blicharz</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#outside">Outside work</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="col" id="top">
+
+    <section class="intro split">
+      <div>
+        <h1>Paweł Blicharz</h1>
+        <p class="role">Research engineer · Gdańsk, Poland</p>
+        <p>
+          I'm a research engineer at <a href="https://animatica.ai/">Animatica</a>,
+          where I train generative models that animate 3D characters.
+        </p>
+        <p>
+          My research is in <strong>mechanistic interpretability</strong>. I take trained networks apart
+          to find which parts cause a behaviour, and test that they really do. What I'd like most is for that
+          understanding to change how we train models, not only describe them. I also have a soft spot for
+          reinforcement learning, where I started.
+        </p>
+        <p>
+          I studied Data Engineering at Gdańsk University of Technology, and for a while led
+          <a href="https://github.com/Gradient-PG">Gradient PG</a>, the university's deep learning club.
+        </p>
+        <p class="links">
+          <a href="mailto:pawel.blicharz.dev@gmail.com">Email</a>
+          <a href="https://github.com/Pawcharz">GitHub</a>
+          <a href="https://www.linkedin.com/in/pawel-blicharz-dev/">LinkedIn</a>
+        </p>
+      </div>
+      <img class="portrait" src="assets/portrait.webp" alt="Paweł Blicharz" width="800" height="800">
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p class="lead">
+        I like causal methods (sparse probing, activation patching, ablations) because they turn
+        "the model seems to use X" into a claim you can try to break.
+      </p>
+
+      <article class="paper split split-media">
+        <figure>
+          <img src="assets/emnlp-poster.jpg" alt="Paweł Blicharz and Miłosz Grunwald next to their poster at EMNLP 2026" loading="lazy" width="1152" height="1536">
+          <figcaption>With Miłosz at our poster, EMNLP 2026 in Budapest.</figcaption>
+        </figure>
+        <div>
+          <p class="meta">EMNLP 2026 · Main conference</p>
+          <h3>A Mechanistic Study of AI-Text Detection Neurons in Frozen BERT: Sparse Probing and Activation Patching on RAID</h3>
+          <p class="authors"><strong>Paweł Blicharz</strong>, Miłosz Grunwald</p>
+          <p>
+            Where does a frozen BERT keep the difference between human and AI text?
+            Out of 9,216 neurons, a stable set of 45 to 62 is enough for near-ceiling detection.
+            Copying them into human text flips the detector 10 to 16 times more often than random
+            neurons, while erasing them costs almost nothing. Easy to inject, hard to erase.
+          </p>
+          <p class="item-links">
+            <a href="https://arxiv.org/abs/2609.30287">Paper</a>
+            <a href="https://github.com/Gradient-PG/ai-text-detection-neurons">Code</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3><a href="https://github.com/Pawcharz/obelus-paper-reader">Obelus</a></h3>
+        <p>A paper reader for pen or keyboard. Circle a passage, write in the margin, and the note links itself to the exact words, equations and figures it's about. Everything is saved as plain files that your tools and AI agents can read. Free and open source, for Windows and Linux.</p>
+        <video controls preload="none" playsinline poster="assets/obelus-poster.jpg" width="1920" height="1080">
+          <source src="assets/obelus-demo.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="project split split-media">
+        <figure>
+          <img src="assets/warehouse-env.jpg" alt="Top-down sketch of the environment: the agent with a forward camera, two items and a delivery spot" loading="lazy" width="600" height="592">
+        </figure>
+        <div>
+          <h3><a href="https://github.com/Pawcharz/warehouse-bot-training">Warehouse bot</a></h3>
+          <p>My thesis agent. It sees the room through a 120° camera, gets told which item is wanted, and has to find it and bring it to the delivery spot. PPO and a curiosity bonus written from scratch in PyTorch, trained in Unity with a curriculum.</p>
+        </div>
+      </article>
+
+      <ul class="rows projects">
+        <li>
+          <a href="https://github.com/Pawcharz/autoresearcher">autoresearcher</a>
+          <p>Runs ML experiments overnight on your codebase and writes up what it found.</p>
+        </li>
+        <li>
+          <a href="https://github.com/Pawcharz/graph-touch-pinch">graph-touch-pinch</a>
+          <p>An Obsidian plugin that fixes pinch-to-zoom on Windows touchscreens.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="rows">
+        <li>
+          <span class="when">2026 –</span>
+          <div><h3>Research Engineer, Animatica</h3>
+          <p>Generative models for character animation. I work on motion in-betweening, filling in natural motion between the key poses an animator sets, and earlier on understanding arbitrary character rigs for retargeting.</p></div>
+        </li>
+        <li>
+          <span class="when">2025 – 2026</span>
+          <div><h3>ML Engineer, Teacode</h3>
+          <p>A passport OCR scanner with 99.5%+ field accuracy, a RAG system for Polish documents, and a real-time voice assistant.</p></div>
+        </li>
+        <li>
+          <span class="when">2024</span>
+          <div><h3>R&amp;D Engineer, Dataedo</h3>
+          <p>Data connectors and lineage for a data governance platform.</p></div>
+        </li>
+        <li>
+          <span class="when">2022 – 2023</span>
+          <div><h3>Full-stack Developer, Sidnet</h3>
+          <p>APIs and a constraint-based optimiser that cut unused office space by 80%.</p></div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section id="education">
+      <h2>Education &amp; community</h2>
+      <ul class="rows">
+        <li>
+          <span class="when">2022 – 2026</span>
+          <div><h3>B.Eng. Data Engineering, Gdańsk University of Technology</h3>
+          <p>Thesis, graded 5/5: a goal-conditioned RL agent for object manipulation in Unity, with PPO and curiosity written from scratch.</p></div>
+        </li>
+        <li>
+          <span class="when">2023 –</span>
+          <div><h3>Gradient PG, former President</h3>
+          <p>Took the club over at four members and grew it past forty, with a research track aimed at conference papers. Now advising on research.</p></div>
+        </li>
+        <li>
+          <span class="when">2026</span>
+          <div><h3>MLSS 2026, Kraków</h3>
+          <p>Machine Learning Summer School, Reliability &amp; Safety edition.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="outside">
+      <h2>Outside work</h2>
+      <p>
+        I'm starting a series of explainer videos on what happens inside AI models.
+        I run, train at home, and keep a slightly over-engineered system of notes and flashcards
+        for everything I read.
+      </p>
+    </section>
+
+    <footer>
+      <p>Write to me at <a href="mailto:pawel.blicharz.dev@gmail.com">pawel.blicharz.dev@gmail.com</a>. I'm always happy to talk about interpretability and research ideas.</p>
+      <p class="fine">© 2026 Paweł Blicharz</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
